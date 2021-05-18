@@ -222,4 +222,4 @@ Occasionally you need to transer your files from your machine to our Ubuntu syst
 ---
 
 It is very important to follow a good/standard coding style. Refer to this document when writing code.
-[CS 2400 Coding Style](docs/coding-style.md)
+[Coding Style](docs/coding-style.md)

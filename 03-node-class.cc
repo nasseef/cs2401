@@ -2,7 +2,7 @@
  *   @file: 03-node-class.cc
  * @author: Nasseef Abukamail
  *   @date: May 26, 2021
- *  @brief: Class Node that represents a singular linked list. 
+ *  @brief: Class Node that is used in a singular linked list. 
  */
 
 #include <iostream>

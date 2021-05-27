@@ -2,8 +2,7 @@
  *   @file: 03-node-class.cc
  * @author: Nasseef Abukamail
  *   @date: May 26, 2021
- *  @brief: Class List uses the Node class to create a singular
- *          linked list.
+ *  @brief: Test the doubly linked list class
  */
 
 #include <iostream>

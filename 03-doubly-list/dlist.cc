@@ -2,7 +2,7 @@
  *   @file: Dlist.cc
  * @author: Nasseef Abukamail
  *   @date: May 26, 2021
- *  @brief: Class DList implementation uses the DNode class to create a singular
+ *  @brief: Class DList implementation uses the DNode class to create a doubly
  *          linked Dlist.
  */
 

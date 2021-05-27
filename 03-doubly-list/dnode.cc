@@ -4,7 +4,7 @@
  *   @file: dnode.cc
  * @author: Nasseef Abukamail
  *   @date: May 26, 2021
- *  @brief: Class Node implementation that is used in a singular linked list. 
+ *  @brief: Class DNode implementation that is used in a doubly linked list. 
  */
 
 #include <iostream>

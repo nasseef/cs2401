@@ -2,7 +2,7 @@
  *   @file: node.h
  * @author: Nasseef Abukamail
  *   @date: May 26, 2021
- *  @brief: Class DNode header file that is used in a singular linked list. 
+ *  @brief: Class DNode header file that is used in a doubly linked list. 
  */
 
 #ifndef DNODE_H

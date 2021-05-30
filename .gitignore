@@ -2,7 +2,7 @@
 .vscode
 test*.*
 genmake.cc
-all-*
+L-*
 #debug information
 *.dSYM
 # Prerequisites

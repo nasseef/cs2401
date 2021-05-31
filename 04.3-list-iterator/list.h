@@ -33,12 +33,12 @@ class List {
         ItDataType &operator*() const { return current->getData(); }
 
         Node<ItDataType> *operator->() { return current; }
-        // overload prefix ++ operator as in ++itr
+        // overload prefix ++ operator as in ++it
         Iterator &operator++() {
             current = current->getNext();
             return *this;
         }
-        // overload postfix ++ operator as in itr++
+        // overload postfix ++ operator as in it++
         Iterator operator++(int) {
             Iterator original = *this;
             current = current->getNext();
@@ -75,12 +75,12 @@ class List {
         const ItDataType &operator*() const { return current->getData(); }
 
         const Node<ItDataType> *operator->() const { return current; }
-        // overload prefix ++ operator as in ++itr
+        // overload prefix ++ operator as in ++it
         ConstIterator &operator++() {
             current = current->getNext();
             return *this;
         }
-        // overload postfix ++ operator as in itr++
+        // overload postfix ++ operator as in it++
         ConstIterator operator++(int) {
             ConstIterator original = *this;
             current = current->getNext();

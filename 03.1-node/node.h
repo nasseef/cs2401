@@ -24,17 +24,31 @@ public:
      *                  type, 0 for numbers, false for bool
      * @param newNext - next pointer within the node, default nullptr
      */
-    Node(const DataType newData = DataType(), Node * newNext = nullptr);
+    Node(const DataType newData = DataType(), Node * newNext = nullptr){
+    data = newData;
+    next = newNext;
+}
+
+    
 
     //setters
-    void setData(const DataType &newData);
-    void setNext(Node *newNext);
+    void setData(const DataType &newData){
+        data = newData;
+    }
+    void setNext(Node *newNext){
+        next = newNext;
+    }
 
     //getters
-    DataType getData() const;
-    const Node* getNext() const; //get the next field as constant
-    Node* getNext(); //get the next field
-
+    DataType getData() const{
+        return data;
+    }
+    const Node* getNext() const{ //get the next field as constant
+        return next;
+    }
+    Node* getNext(){ //get the next field
+        return next;
+    }
 private:
     DataType data;
     Node *next;

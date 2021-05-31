@@ -29,6 +29,11 @@ int main(int argc, char const *argv[]) {
     //numbers.output();
 
     auto it = numbers.begin();
+    advance(it, 2);
+    cout << *it << endl;
+    
+    cout << *next(it, 1) << " " << *it << endl;
+    cout << "-------------" << endl;
     //or
     //List<int>::iterator i = numbers.begin();
     for (; it != numbers.end(); ++it){

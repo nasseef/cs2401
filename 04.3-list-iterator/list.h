@@ -18,6 +18,7 @@ using namespace std;
 template <typename DataType>
 class List {
    public:
+    
     // create an iterator for the list class
     template <typename ItDataType>
     class Iterator {

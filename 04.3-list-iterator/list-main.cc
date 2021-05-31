@@ -54,6 +54,5 @@ int main(int argc, char const *argv[]) {
     {
         cout << *it << endl;
     }
-    
     return 0;
 } /// main

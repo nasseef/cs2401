@@ -22,7 +22,12 @@ class List {
     template <typename ItDataType>
     class Iterator {
        public:
+        //C++ iterator implementation expects these properties
         using iterator_category = forward_iterator_tag;
+        using difference_type = ptrdiff_t;
+        using value_type = Node <ItDataType>;
+        using pointer = Node<ItDataType> *;
+        using reference = Node<ItDataType> &;
         // initialize the iterator
         Iterator(Node<ItDataType> *initial = nullptr) { current = initial; }
 
@@ -61,7 +66,12 @@ class List {
     template <typename ItDataType>
     class ConstIterator {
        public:
+        //C++ iterator implementation expects these properties
         using iterator_category = forward_iterator_tag;
+        using difference_type = ptrdiff_t;
+        using value_type = Node <ItDataType>;
+        using pointer = Node<ItDataType> *;
+        using reference = Node<ItDataType> &;
 
         // initialize the iterator
         ConstIterator(const Node<ItDataType> *initial = nullptr) { current = initial; }

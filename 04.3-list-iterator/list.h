@@ -23,9 +23,6 @@ class List {
     class Iterator {
        public:
         using iterator_category = forward_iterator_tag;
-        using difference_type = ptrdiff_t;
-        using value_type = ItDataType;
-
         // initialize the iterator
         Iterator(Node<ItDataType> *initial = nullptr) { current = initial; }
 
@@ -65,8 +62,6 @@ class List {
     class ConstIterator {
        public:
         using iterator_category = forward_iterator_tag;
-        using difference_type = ptrdiff_t;
-        using value_type = ItDataType;
 
         // initialize the iterator
         ConstIterator(const Node<ItDataType> *initial = nullptr) { current = initial; }

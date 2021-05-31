@@ -5,6 +5,8 @@
  *   @date: May 26, 2021
  *  @brief: Class List uses the Node class to create a singular
  *          linked list.
+ *          The copy constructor and the overloaded = operator need to be
+ *          implemented.
  */
 
 #ifndef LIST_H

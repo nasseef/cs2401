@@ -95,9 +95,8 @@ MyString::MyString() {
     maxLength = 1000;
 }
 MyString::MyString(const char* newString) {
-    int length = strlen(newString);
     str = strndup(newString, 1000);  // Allocate and copy up to 1000 characters
-    maxLength = length;
+    maxLength = strlen(str);
 }
 MyString::~MyString() { delete[] str; }
 

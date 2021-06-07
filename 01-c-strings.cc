@@ -37,17 +37,17 @@ int main(int argc, char const *argv[]) {
     cout << "Enter your full name: ";
     cin.getline(name, 100);
     cout << name << endl;
-
+    
     //using some string functions
     char name2[100];
     //copy name into name2
     strncpy(name2, name, 100);
     cout << name2 << endl;
-
+    
     strncat(last, ", ", 100);
     strncat(last, first, 100);
     cout << last << endl;
-
+    
     cout << "Name length: " << strlen(name) << endl;
 
     if (strncmp(last, "Smith, John", 100) == 0)

@@ -32,5 +32,11 @@ int main(int argc, char const *argv[]) {
     //deallocate intPtr 
     delete intPtr;
 
+    //using the auto declaration
+    auto value = 2.3;   // creating a double variable
+    auto ptr = &value; //creating a pointer to a double
+    *ptr = 12.3;
+    cout << "value is now changed to " << value << endl;
+    
     return 0;
 } /// main

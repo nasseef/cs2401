@@ -14,11 +14,12 @@ using namespace std;
 
 class Bag {
    public:
-   static const size_t CAPACITY = 1000;
+   static const size_t CAPACITY = 1000;  //shared with all objects
     /**
      * Bag: Initialize the bag to an empty array
      */
     Bag();
+
     /**
      * size - return the size of the bag
      * @return - return the number of values in the bag
@@ -61,7 +62,7 @@ class Bag {
 
     private:
     int data[CAPACITY];
-    int used;
+    size_t used;
 };
 /// Constants and function prototypes
 
@@ -76,25 +77,36 @@ int main(int argc, char const *argv[]) {
     b1.insert(15);
     b1.insert(20);
     cout << "b1: " << b1 << endl;
-
+    //return 0;
     cout << "After erasing 10" << endl;
-    b1.erase(10);
+    if(b1.erase(10)){
+        cout << "10 was removed from the bag" << endl;
+    }
+    else {
+        cout << "10 was not found in the bag" << endl;
+    }
+    
     cout << "b1: " << b1 << endl;
+
+    //return 0;
     cout << "After erasing all 20's" << endl;
-    if (b1.eraseAll(99)){
-        cout << "Eraseall succeeded" << endl;
+    if (b1.eraseAll(20)){
+        cout << "Eraseall succeeded, all occurrences of 20 removed" << endl;
     }
     else{
         cout << "EraseAll failed" << endl;
     }
     cout << "b1: " << b1 << endl;
+    return 0;
 
+    //testing += operator
     Bag b2;
     b2.insert(40);
     b2.insert(50);
     b2.insert(60);
     b2.insert(20);
 
+    //let's add b2 to b1
     b1 += b2;
     cout << "b1 + b2: " << b1 << endl;
 

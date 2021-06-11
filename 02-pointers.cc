@@ -2,7 +2,7 @@
  *   @file: pointers.cc
  * @author: Nasseef Abukamail
  *   @date: May 26, 2021
- *  @brief: Simple pointers
+ *  @brief: Simple pointers example
  */
 
 #include <iostream>
@@ -26,10 +26,20 @@ int main(int argc, char const *argv[]) {
     //allocate a new integer
     intPtr = new int;
     *intPtr = 99;
+
+    //make two pointers point to the same location
+    int *intPtr2 = intPtr;
     cout << "num = " << num << endl;
     cout << "*intPtr = " << *intPtr << endl;
+    cout << "*intPtr2 = " << *intPtr2 << endl;
     
-    //deallocate intPtr 
+    //modify what intPtr2 is pointing to
+    *intPtr2 = 88;
+    //this will also change *intPtr
+    cout << "*intPtr = " << *intPtr << endl;
+    cout << "*intPtr2 = " << *intPtr2 << endl;
+
+    //deallocate intPtr, this will make intPtr2 a dangling pointer
     delete intPtr;
 
     //using the auto declaration

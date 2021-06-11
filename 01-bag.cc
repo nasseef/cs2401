@@ -61,8 +61,8 @@ class Bag {
     friend ostream& operator <<(ostream &out, const Bag &b);
 
     private:
-    int data[CAPACITY];
-    size_t used;
+        int data[CAPACITY];
+        size_t used;
 };
 /// Constants and function prototypes
 
@@ -88,7 +88,6 @@ int main(int argc, char const *argv[]) {
     
     cout << "b1: " << b1 << endl;
 
-    //return 0;
     cout << "After erasing all 20's" << endl;
     if (b1.eraseAll(20)){
         cout << "Eraseall succeeded, all occurrences of 20 removed" << endl;
@@ -97,7 +96,7 @@ int main(int argc, char const *argv[]) {
         cout << "EraseAll failed" << endl;
     }
     cout << "b1: " << b1 << endl;
-    return 0;
+    
 
     //testing += operator
     Bag b2;

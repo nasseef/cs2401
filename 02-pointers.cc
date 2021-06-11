@@ -1,5 +1,5 @@
 /**
- *   @file: pointers.cc
+ *   @file: 02-pointers.cc
  * @author: Nasseef Abukamail
  *   @date: May 26, 2021
  *  @brief: Simple pointers example

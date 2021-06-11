@@ -1,5 +1,5 @@
 /**
- *   @file: dynamic-arrays.cc
+ *   @file: 02-dynamic-arrays.cc
  * @author: Nasseef Abukamail
  *   @date: May 26, 2021
  *  @brief: Add Description

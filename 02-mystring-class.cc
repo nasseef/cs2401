@@ -13,8 +13,8 @@ using namespace std;
 
 class MyString {
    public:
-    MyString(int size);       // Initializes with a size (default to 1000).
     MyString();               // initialize with 1000 size
+    MyString(int size);       // Initializes with a size (default to 1000).
     MyString(const char* s);  // initialize the string with the
                               // given string
     ~MyString();              // Returns all the dynamic memory
@@ -53,12 +53,14 @@ int main(int argc, char const* argv[]) {
     MyString last("Smith");
     cout << first << " " << last << endl;  // prints Smith
     cout << "Last initial: " << last.at(0) << endl;
+    
     {
         MyString copyLast(6);
         copyLast = last;
         // Let's exammin the pointer inside last and last2
         cout << "Copy of last: " << copyLast << endl;
     }
+
     cout << last << endl;
     return 0;
 }  /// main
@@ -123,15 +125,18 @@ char* MyString::getString() {
     char* strCopy = strndup(str, 1000);  // never return a pointer to your data
     return strCopy;
 }
-char MyString::at(int index) {
+
+char MyString::at(int index) { 
+    // retrun character at index or '\0'
     if (index >= 0 && index < strlen(str)) {
         return str[index];
-    } else {
-        return '\0';
     }
+    return '\0';
 
-}  // retrun character at index or '\0'
+}  
+
 int MyString::length() const { return strlen(str); }
+
 ostream& operator<<(ostream& outs, const MyString& theString) {
     outs << theString.str;
     return outs;

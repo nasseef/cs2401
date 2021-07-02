@@ -64,7 +64,7 @@ void DList::headInsert(DNode::DataType value) {
     head = temp;
 }
 
-void DList::insert(DNode::DataType value) { headInsert(value); }
+
 
 void DList::insertAfter(DNode *cursor, DNode::DataType value) {
     if (cursor == nullptr) {

@@ -30,6 +30,7 @@ int main(int argc, char const *argv[]) {
     {
         cout << "searchPtr value: " << searchPtr->getData() << endl;
     }
+    
     //Insert a new value after 20
     myList.insertAfter(searchPtr, 99);
 
@@ -37,7 +38,7 @@ int main(int argc, char const *argv[]) {
     
     cout << "List values after inserting after 20" << endl;
     myList.output();
-   
+
     //delete some nodes
     myList.deleteNode(searchPtr);
     cout << "List values after deleting 20" << endl;

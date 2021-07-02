@@ -26,7 +26,6 @@ public:
     void output() const;
     DNode* search(DNode::DataType target);
     void headInsert(DNode::DataType value);
-    void insert(DNode::DataType value);
     void insertAfter(DNode *cursor, DNode::DataType value);
     void deleteNode(DNode *current);
 private:

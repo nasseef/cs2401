@@ -26,8 +26,7 @@ public:
     void output() const;
     Node* search(Node::DataType target);
     void headInsert(Node::DataType value);
-    void insert(Node::DataType value);
-    void insertAfter(Node *previous, Node::DataType value);
+    void insert(Node *previous, Node::DataType value);
     void deleteNode(Node *current);
 private:
     Node *head;

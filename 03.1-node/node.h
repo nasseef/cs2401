@@ -25,9 +25,9 @@ public:
      * @param newNext - next pointer within the node, default nullptr
      */
     Node(const DataType newData = DataType(), Node * newNext = nullptr){
-    data = newData;
-    next = newNext;
-}
+        data = newData;
+        next = newNext;
+    }
 
     
 
@@ -49,6 +49,7 @@ public:
     Node* getNext(){ //get the next field
         return next;
     }
+    
 private:
     DataType data;
     Node *next;

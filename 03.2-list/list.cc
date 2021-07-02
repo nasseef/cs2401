@@ -58,14 +58,16 @@ void List::headInsert(Node::DataType value) {
     head = temp;
 }
 
-void List::insert(Node::DataType value) { headInsert(value); }
 
-void List::insertAfter(Node *previous, Node::DataType value) {
-    Node *temp = new Node(value);
-    if (previous != nullptr) {
-        temp->setNext(previous->getNext());
-        previous->setNext(temp);
+
+void List::insert(Node *previous, Node::DataType value) {
+    if(previous == nullptr){
+        headInsert(value);
     }
+    Node *temp = new Node(value);
+    
+    temp->setNext(previous->getNext());
+    previous->setNext(temp);
 }
 
 void List::deleteNode(Node *current) {

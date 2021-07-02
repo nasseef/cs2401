@@ -21,24 +21,24 @@ int main(int argc, char const *argv[]) {
     myList.headInsert(20);
     myList.headInsert(10);
     cout << "Length of the list: " << myList.length() << endl;
-
+    
     cout << "List values" << endl;
     myList.output();
-
-    myList.insert(25);
+   
     Node *searchPtr = myList.search(20);
     if (searchPtr != nullptr)
     {
         cout << "searchPtr value: " << searchPtr->getData() << endl;
     }
+   
     //Insert a new value after 20
-    myList.insertAfter(searchPtr, 99);
+    myList.insert(searchPtr, 99);
 
     
     
     cout << "List values after inserting after 20" << endl;
     myList.output();
-
+    
     //delete some nodes
     myList.deleteNode(searchPtr);
     cout << "List values after deleting 20" << endl;

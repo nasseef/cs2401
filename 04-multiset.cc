@@ -22,15 +22,15 @@ int main(int argc, char const *argv[]) {
     // Iterate over all names in the list (sorted)
     // the iterator is of type: multiset<string>::iterator or we can use
     // auto and have C++ determine the type
-    for (auto iter = names.begin(); iter != names.end(); iter++) {
-        string word = *iter;
+    for (auto iter = names.begin(); it != names.end(); it++) {
+        string word = *it;
         cout << word << endl;
     }
 
     cout << "After erasing the first element 'Chrissy' should be removed" << endl;
     names.erase(names.begin());
-    for (auto iter = names.begin(); iter != names.end(); iter++) {
-        string word = *iter;
+    for (auto it = names.begin(); it != names.end(); it++) {
+        string word = *it;
         cout << word << endl;
     }
     cout << "Size: " << names.size() << endl;

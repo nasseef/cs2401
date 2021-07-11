@@ -18,10 +18,11 @@ DList::DList(DNode *newHead) { head = newHead; }
 
 DList::~DList() {
     // deallocate all the Dnodes
-    DNode *cursor = head;
-    while (cursor != nullptr) {
-        deleteNode(cursor);
-        cursor = cursor->getNext();
+    DNode<DataType> *cursor;
+    while (head != nullptr) {
+        cursor = head;
+        head = head->getNext();
+        delete cursor;
     }
 }
 

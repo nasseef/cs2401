@@ -26,21 +26,9 @@ int main(int argc, char const *argv[]) {
     cout << "Length of the list: " << numbers.length() << endl;
 
     cout << "List values" << endl;
-    //numbers.output();
-
-    auto it = numbers.begin();
-    advance(it, 2);
-    cout << *it << endl;
-    
-    cout << *next(it, 1) << " " << *it << endl;
-    cout << "-------------" << endl;
-    //or
-    //List<int>::iterator i = numbers.begin();
-    for (; it != numbers.end(); ++it){
-        (*it)++;
-    }
-    
+  
     numbers.output();
+    cout << "*****************************\n";
     //Let's try a List of a different type
 
     List<string> names;
@@ -50,10 +38,18 @@ int main(int argc, char const *argv[]) {
     names.headInsert("Chrissy");
     names.headInsert("Larry");
 
-    //use the range based for loop this time
-    for(auto name : names){
-        cout << name << endl;
+    cout << "List of names\n";
+    for (auto it = names.begin(); it != names.end(); it++)
+    {
+        cout << *it << endl;
     }
+
+    //use the range based for loop this time
+    // for(auto name : names){
+    //     cout << name << endl;
+    // }
+
+    cout << "*****************************\n";
 
     cout << "Using the constant iterator" << endl;
     //test the constant iterator

@@ -16,7 +16,7 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
     Node<int> *temp = new Node<int>(88);
-
+    //Node<string> *temp2 = new Node<string>("John");
     //create head and link it to temp
     Node<int> *head = new Node<int>();
     head->setData(99);

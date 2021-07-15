@@ -31,5 +31,6 @@ public:
 private:
     Node<DataType> *head;
 };
-#include "list.cc"
+#include "list.cc" //include the implementation
+                   //sepperate compilation does not work here
 #endif

@@ -37,5 +37,6 @@ private:
     DataType data;
     Node *next;
 };
-#include "node.cc"
+#include "node.cc"  //must be included here 
+                    //connot use sepperate compilations with templates
 #endif

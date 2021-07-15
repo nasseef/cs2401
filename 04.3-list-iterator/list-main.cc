@@ -39,6 +39,7 @@ int main(int argc, char const *argv[]) {
     names.headInsert("Larry");
 
     cout << "List of names\n";
+    //Using auto below, it will be declared as: List<string>::iterator it
     for (auto it = names.begin(); it != names.end(); it++)
     {
         cout << *it << endl;
@@ -53,6 +54,7 @@ int main(int argc, char const *argv[]) {
 
     cout << "Using the constant iterator" << endl;
     //test the constant iterator
+    //Using auto below, it will be declared as: List<string>::const_iterator it
     for (auto it = names.cbegin(); it != names.cend(); it++)
     {
         cout << *it << endl;

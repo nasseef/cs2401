@@ -17,12 +17,17 @@ template<typename DataType>
 class List
 {
 public:
+    List(){head = nullptr;}
     List(Node<DataType> *newHead = nullptr);
     ~List();
 
+    //getter
+    Node<DataType> * getHead(){return head;}
+    
     //List algorithms
     size_t length() const;
     void output() const;
+
     Node<DataType>* search(DataType target);
     void headInsert(DataType value);
     void insert(DataType value);

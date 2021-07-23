@@ -21,8 +21,8 @@ class Athlete {
     //..
     void setName(string newName){name = newName;}
     void setAge(size_t newAge){age = newAge;}
-    void display();
-    virtual string toString(); //return all info in a string
+    virtual void display();
+    
    private:
     string name;
     size_t age;

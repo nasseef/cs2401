@@ -31,6 +31,7 @@ int main(int argc, char const *argv[]) {
     BaseballPlayer *player3 = new BaseballPlayer("John", 28, .257);
     player3->display();
 
+    
     Athlete* players[5];
     players[0] = player1;
     players[1] = player2;

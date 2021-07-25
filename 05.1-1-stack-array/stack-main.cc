@@ -30,6 +30,7 @@ int main(int argc, char const *argv[]) {
     cout << "Peek at the top of the stack: " << numbers.peek() << endl;
     
     cout << endl;
+    
     //stack of strings
     Stack<string> names;
     names.push("Jack");

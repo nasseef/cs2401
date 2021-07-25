@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
     numbers.pop();
     cout << "Peek at the front of the queue: " << numbers.peek() << endl;
     cout << endl;
-
+    
     //queue of strings
     Queue<string> names;
     names.push("Jack");

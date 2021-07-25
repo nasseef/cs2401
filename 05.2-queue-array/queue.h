@@ -48,13 +48,12 @@ void Queue<Item>::push(const Item& entry)
 template <class Item>
 Item Queue<Item>::pop( )
 {
-    size_t answerIndex;
-
     assert(!isEmpty( ));
-    answerIndex = front;
+    Item removedItem = data[front];
+
     front = nextIndex(front);
     numItems--;    
-    return data[answerIndex];
+    return removedItem;
 }
 template <class Item>
 Item Queue<Item>::peek( )

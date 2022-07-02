@@ -1,5 +1,5 @@
 ## Windows Subsystem for Linux
-### Contact: Mark May (mm754313@ohio.edu)
+### Contributers: Mark May (mm754313@ohio.edu), Nasseef Abukamail (abukamai@ohio.edu)
 ---
 <br>
 If you see any mistakes or if there is anything that you think should be added to this please feel free to email me or tag me in a
@@ -24,6 +24,13 @@ solution by Microsoft called Windows Subsystem for Linux. It is an optional feat
 distribution of Linux like Ubuntu onto your computer, and run the terminal as if it was a native Windows application.
 
 ### Download/Installation Instructions
+Note: if you get this error during the installing:
+ ```bash 
+The requested operation requires elevation
+```
+run ***PowerShell*** as an administrator.
+
+![Powershell Admin](powershell-admin.jpg)
 
 The download/installation instructions can be found on the Microsoft website [here.](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 When choosing a distribution of Linux to use I recommend using one of the latest versions of Ubuntu since that is what we use in the labs,
@@ -33,7 +40,7 @@ After setting everything up you should be able to open a terminal that looks sim
 
 ![terminal example](WSL_Terminal.png)
 
-To make sure everything is upto date run the command:
+To make sure everything is up to date run the command:
 
 ```bash
 sudo apt-get update

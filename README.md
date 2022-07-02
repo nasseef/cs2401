@@ -5,7 +5,7 @@
 
 ---
 
-  Welcome to CS 2401. This class is a continuation of CS 2400 (Introduction to Computer Science I). In this class we will be writing programs in C++. In order to prepare for class, you need to install a C++ compiler and other software tools on your own machines.  We will be using [Git/GitHub](#gitgithub) for source/version control. Your projects (homework assignments) will be in our GitHub [2401 classroom](https://github.com/2400-sm-20).
+  Welcome to CS 2401. This class is a continuation of CS 2400 (Introduction to Computer Science I). In this class we will be writing programs in C++. In order to prepare for class, you need to install a C++ compiler and other software tools on your own machines.  We will be using [Git/GitHub](#gitgithub) for source/version control. Your projects (homework assignments) will be in our GitHub [2401 classroom](https://github.com/2400-sm-22).
 
   **Important:** In order to be able to use your own computer to do the assignments and examples in this class you need to install the following:
   - C/C++ compiler like GNU C++  or MinGW 
@@ -31,7 +31,7 @@
     - [Configure Code Runner to use `-Wall -std=c++11 -g`](#configure-code-runner-to-use--wall--stdc11--g)
     - [Configure the Debugger](#configure-the-debugger)
       - [Mac Setup](#mac-setup)
-      - [Windows Setup](#windows-setup)
+      - [Windows/Linux Setup](#windowslinux-setup)
     - [Helpfull user snippets](#helpfull-user-snippets)
   - [Git/GitHub](#gitgithub)
     - [Git Installation](#git-installation)
@@ -46,15 +46,19 @@
 ---
 
 - `Mac`:
-    Install the `Command Line Tools` using the command `xcode-select --install`. This will also install `git`. Alternatively, you can install Xcode and install the `Command Line Tools` after you run it the first time.
+    Start the terminal program (Search for `Terminal`). Install the `Command Line Tools` using the command `xcode-select --install`. This will also install `git`. Alternatively, you can install Xcode and install the `Command Line Tools` after you run it the first time.
 - `Linux`: Should already come with GNU g++ preinstalled.
 
 - `Windows`: 
-  - [Install MinGW Compiler](docs/installing-minGW64.md). (Recommended)
-  - Or
-  - [Install Windows Subsystem for Linux](docs/Windows10-WSL.md) 
-This will give you a `bash` terminal closer to what Mac and Linux has. If you go through the instructions listed there you won't have to install minGW, and you can use the same instructions/commands as Linux/Mac that are shown in the rest of this readme.
+  
+  
+  - [Install Windows Subsystem for Linux](docs/Windows10-WSL.md) (Recommended)
+  
+    This will give you a `bash` terminal closer to what Mac and Linux has. If you go through the instructions listed there you can use the same instructions/commands as Linux/Mac that are shown in the rest of this readme file.
 
+- Or
+  - [Install MinGW Compiler](docs/installing-minGW64.md). (Will not work on some newer Windows machines)
+  
 
 
 ### Compiling and running the examples in this repository
@@ -150,24 +154,49 @@ You need a good programming editor (**DO NOT USE WINDOWS Notepad**). I recommend
 
 #### Configure the Debugger
 
-the debugger depends on what executable file you set up in the previous step.
+**The debugger is configured for every project separately. You must open the project folder in order to use it.**
+
+The debugger depends on what executable file you set up in the previous step. Make sure you open the folder (not the program) where your program resides. You need to do these steps for every project you want to debug.
 ##### Mac Setup
+- Install the extension `CodeLLDB`
 - Click on the debug icon on the left
 - Click on `Run and Debug`
 - Seclect `C++ (GDB/LLDB)
-- Select `g++ - Build and debug active file`
-- Edit the file `launch.json` and change the line
-  - "externalConsole": false,
-  to
-  "externalConsole": true,
+- Select `lldb - Build and debug active file`
+- Edit the file `launch.json` inside the `.vscode` directory and make the following changes:
+```json
+  "configurations": [
+        {
+            "name": "launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: clang++ build active file"
+        }
+```
 
-Input interaction will be done in an external terminal window.
+> Input interaction will be done in the terminal window within VScode.
+- Edit the `tasks.json` file inside the `.vscode` directory and change the `args` section to the following:
+  ```json
+  "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/a.out"
+          ],
+  ```
 
-##### Windows Setup
+##### Windows/Linux Setup
 - Click on the debug icon on the left
 - Click on `Run and Debug`
 - Seclect `C++ (GDB/LLDB)
-- Select `g++.exe - Build and debug active file`
+- Select `g++/g++.exe - Build and debug active file`
   
 
 From this point on, you can click on the green arrow to start debugging. Make sure you set a break point. To set a break point inside your code, click to the left of the line number. A red circle should appear.
@@ -203,7 +232,6 @@ https://education.github.com/students
 #### Generate a Personal Access Token (PAT) to be able to use GitHub remotely
 [Personal Access Token](docs/GitHub-token.md)
 
-
 ### Linux Commands and Remote Login/File Transfer
 
 ---
@@ -227,4 +255,4 @@ Occasionally you need to transer your files from your machine to our Ubuntu syst
 ---
 
 It is very important to follow a good/standard coding style. Refer to this document when writing code.
-[Coding Style](docs/coding-style.md)
+[CS 2401 Coding Style](docs/coding-style.md)

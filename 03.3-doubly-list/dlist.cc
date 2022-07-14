@@ -10,7 +10,7 @@
 #include <cstdlib>
 #include <iomanip>
 #include <iostream>
-
+#include "dnode.h"
 #include "dlist.h"
 
 using namespace std;
@@ -18,7 +18,7 @@ DList::DList(DNode *newHead) { head = newHead; }
 
 DList::~DList() {
     // deallocate all the Dnodes
-    DNode<DataType> *cursor;
+    DNode *cursor;
     while (head != nullptr) {
         cursor = head;
         head = head->getNext();

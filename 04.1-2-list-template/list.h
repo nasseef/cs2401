@@ -21,8 +21,6 @@ public:
     List(Node<DataType> *newHead = nullptr);
     ~List();
 
-    //getter
-    Node<DataType> * getHead(){return head;}
     
     //List algorithms
     size_t length() const;

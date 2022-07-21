@@ -21,6 +21,7 @@ public:
     DList(DNode *newHead = nullptr);
     ~DList();
 
+     DNode<DataType>* listHead() {return head;} //returns a pointer to the head of the list
     
     //List algorithms
     size_t length() const;

@@ -17,7 +17,6 @@ template<typename DataType>
 class List
 {
 public:
-    List(){head = nullptr;}
     List(Node<DataType> *newHead = nullptr);
     ~List();
 

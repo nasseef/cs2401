@@ -12,6 +12,5 @@
   -  VS Code (or your favorite editor)
   -  A GitHub account
 -    
-All of these tools are also available on our lab machines in Stocker Center 307A.
 
 Full instructions for installing all the needed tools can be found [here](https://github.com/nasseef/cs)
